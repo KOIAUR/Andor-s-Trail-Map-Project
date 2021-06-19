@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=0.02, maximum-scale=5.0" />
+	<title></title>
+	<style type="text/css">
+html, body { height:100%; padding:0; margin:0; }
+div#table { height:100%; width:100%; display:table; }
+div#cell { display:table-cell; vertical-align:middle; text-align:center;}
+div#maps { width:904px; height:248px; position:relative; display:inline-block; }
+div#playerPosition { position:absolute; z-index:3; font-size:19pt; color:red; text-shadow:rgba(0, 0, 0, 1) 2px 2px 2px; }
+img { z-index:1; position:absolute; }
+.namedarea { position: absolute; z-index:2; font-size:16pt; text-shadow:black 0.1em 0.1em 0.2em; text-align:center; }
+.namedarea span { display:inline-block; vertical-align:middle; line-height:1em; }
+.settlement { color:white; }
+.other { color:#cccccc; }
+	</style>
+</head>
+<body>
+
+<div id="table">
+<div id="cell">
+<div id="maps">
+<img src="blackwater_mountain51.ed45d3e5.png" id="blackwater_mountain51" style="width:112px; height:80px; left:792px; top:80px;" /><img src="blackwater_mountain52.41cb68d2.png" id="blackwater_mountain52" style="width:240px; height:80px; left:544px; top:88px;" /><img src="blackwater_mountain43.829cb638.png" id="blackwater_mountain43" style="width:240px; height:240px; left:296px; top:0px;" /><img src="blackwater_mountain44.59126218.png" id="blackwater_mountain44" style="width:160px; height:160px; left:128px; top:88px;" /><img src="blackwater_mountain45.3ee15208.png" id="blackwater_mountain45" style="width:120px; height:120px; left:0px; top:80px;" />
+
+<div id="playerPosition">x</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+var player = document.getElementById("playerPosition");
+var params = window.location.search.substring(1);
+if (params) {
+	var pos = params.split(",");
+	var x = parseInt(pos[0])-(0);
+	var y = parseInt(pos[1])-(3312);
+	player.style.top = y + "px";
+	player.style.left = x + "px";
+} else {
+	player.style.display = "none";
+}
+</script>
+
+</body>
+</html>

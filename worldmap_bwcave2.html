@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=0.02, maximum-scale=5.0" />
+	<title></title>
+	<style type="text/css">
+html, body { height:100%; padding:0; margin:0; }
+div#table { height:100%; width:100%; display:table; }
+div#cell { display:table-cell; vertical-align:middle; text-align:center;}
+div#maps { width:368px; height:280px; position:relative; display:inline-block; }
+div#playerPosition { position:absolute; z-index:3; font-size:19pt; color:red; text-shadow:rgba(0, 0, 0, 1) 2px 2px 2px; }
+img { z-index:1; position:absolute; }
+.namedarea { position: absolute; z-index:2; font-size:16pt; text-shadow:black 0.1em 0.1em 0.2em; text-align:center; }
+.namedarea span { display:inline-block; vertical-align:middle; line-height:1em; }
+.settlement { color:white; }
+.other { color:#cccccc; }
+	</style>
+</head>
+<body>
+
+<div id="table">
+<div id="cell">
+<div id="maps">
+<img src="blackwater_mountain36.6b8109ad.png" id="blackwater_mountain36" style="width:88px; height:80px; left:232px; top:0px;" /><img src="blackwater_mountain37.560f3c2d.png" id="blackwater_mountain37" style="width:120px; height:120px; left:248px; top:88px;" /><img src="blackwater_mountain38.d1f8b1c0.png" id="blackwater_mountain38" style="width:240px; height:152px; left:0px; top:128px;" />
+
+<div id="playerPosition">x</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+var player = document.getElementById("playerPosition");
+var params = window.location.search.substring(1);
+if (params) {
+	var pos = params.split(",");
+	var x = parseInt(pos[0])-(408);
+	var y = parseInt(pos[1])-(3320);
+	player.style.top = y + "px";
+	player.style.left = x + "px";
+} else {
+	player.style.display = "none";
+}
+</script>
+
+</body>
+</html>
